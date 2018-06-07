@@ -1,0 +1,24 @@
+{
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Alignment",
+		"Discord Rich Presence",
+		"EJS 2",
+		"GitGutter",
+		"HTML-CSS-JS Prettify",
+		"JSX",
+		"LESS",
+		"nginx",
+		"Package Control",
+		"Python Completions",
+		"SCSS",
+		"SublimeLinter",
+		"SublimeLinter-eslint",
+		"SublimeLinter-lua",
+		"SublimeLinter-tslint",
+		"TypeScript"
+	]
+}

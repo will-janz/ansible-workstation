@@ -1,0 +1,46 @@
+---
+# Terminator (virtual terminal)
+- name: Prep Terminator Config
+  file:
+    group: will
+    mode: 0755
+    owner: will
+    path: /home/will/.config/terminator
+    state: directory
+
+- name: Configure Terminator
+  copy:
+    backup: true
+    dest: /home/will/.config/terminator/config
+    group: will
+    mode: 644
+    owner: will
+    src: terminator.conf
+
+# Sublime Text
+- name: Prep Sublime Text Config
+  file:
+    group: will
+    mode: 0755
+    owner: will
+    path: /home/will/.config/sublime-text-3/Packages/User
+    state: directory
+
+- name: Install ST3 Package Control
+  # https://packagecontrol.io/installation
+  get_url:
+    url: https://packagecontrol.io/Package%20Control.sublime-package
+    dest: "/home/will/.config/sublime-text-3/Installed Packages/Package Control.sublime-package"
+    owner: will
+    group: will
+
+- name: Configure Sublime Text
+  copy:
+    backup: true
+    dest: /home/will/.config/sublime-text-3/Packages/User/
+    group: will
+    mode: 0644
+    owner: will
+    src: {{ item }}
+  with_fileglob:
+    - "sublime-text/*"

@@ -1,0 +1,22 @@
+---
+
+- name: Update included packages
+  apt:
+    update_cache: yes
+    upgrade: dist
+
+- name: Install packages wanted
+  apt:
+    name: {{ item }}
+    state: latest
+  with_items:
+    - build-essential
+    - git
+    - gparted
+    - htop
+    - redshift-gtk
+    - shutter
+    - sqlitebrowser
+    - sublime-text
+    - sysstat
+    - terminator

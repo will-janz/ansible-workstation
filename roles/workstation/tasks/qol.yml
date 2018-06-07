@@ -1,0 +1,10 @@
+---
+
+- name: Configure redshift
+  copy:
+    backup: true
+    dest: /home/will/.config/redshift.conf
+    group: will
+    mode: 644
+    owner: will
+    src: redshift.conf

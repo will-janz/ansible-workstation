@@ -1,0 +1,18 @@
+[
+	{
+    "keys": [ "ctrl+shift+s" ],
+    "command": "save_all"
+  },
+
+	{
+    "keys": [ "ctrl+shift+[" ],
+    "command": "fold_by_level",
+    "args": { "level": 1 }
+  },
+
+	{
+    "keys": [ "ctrl+w" ],
+    "command": "toggle_setting",
+    "args": { "setting": "word_wrap" }
+  }
+]

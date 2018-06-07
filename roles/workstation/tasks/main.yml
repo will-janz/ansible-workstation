@@ -1,0 +1,7 @@
+---
+- include_tasks: general.yml
+- include_tasks: node.yml
+- include_tasks: development.yml
+- include_tasks: qol.yml
+
+# TODO: Chrome?

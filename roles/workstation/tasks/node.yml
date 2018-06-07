@@ -1,0 +1,36 @@
+---
+- name: Add Nodesource key
+  apt_key:
+    url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+
+- name: Configure Nodesource repo
+  copy:
+    backup: true
+    dest: /etc/apt/sources.list.d/nodesource.list
+    group: root
+    mode: 644
+    owner: root
+    src: nodesource.list
+
+- name: Install node
+  apt:
+    name: nodejs
+    state: present
+    update_cache: yes
+
+# - name: Symlink Node
+#   file: path=/usr/bin/node src=/usr/bin/nodejs state=link
+
+- name: Install global NPM packages
+  npm:
+    global: true
+    name: {{ item }}
+    state: latest
+  with_items:
+    - '@angular/cli'
+    - eslint
+    - pm2
+    - protractor
+    - sails
+    - tslint
+    - typescript
