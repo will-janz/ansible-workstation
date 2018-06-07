@@ -24,7 +24,7 @@
 - name: Install global NPM packages
   npm:
     global: true
-    name: {{ item }}
+    name: "{{ item }}"
     state: latest
   with_items:
     - '@angular/cli'

@@ -41,6 +41,6 @@
     group: will
     mode: 0644
     owner: will
-    src: {{ item }}
+    src: "{{ item }}"
   with_fileglob:
     - "sublime-text/*"

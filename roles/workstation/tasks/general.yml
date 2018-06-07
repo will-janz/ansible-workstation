@@ -7,7 +7,7 @@
 
 - name: Install packages wanted
   apt:
-    name: {{ item }}
+    name: "{{ item }}"
     state: latest
   with_items:
     - build-essential
