@@ -1,7 +1,6 @@
 {
 	"always_show_minimap_viewport": true,
 	"auto_complete_commit_on_tab": true,
-	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
 	"default_line_ending": "unix",
 	"drag_text": false,
 	"enable_telemetry": "auto",
